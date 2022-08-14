@@ -18,11 +18,13 @@ export default function BannerFive() {
                 email,
             });
             console.log(result);
+            setEmail("");
         }
         catch (error) {
             console.log(error);
         };
         console.log(email);
+
     }
 
     return (
@@ -37,10 +39,15 @@ export default function BannerFive() {
                         <input value={ email } type="email" className="w-full outline-none" onChange={ handleEmailChange } />
                     </div>
                     <div>
-                        <button type="submit" className="px-8 py-2 rounded-xl text-white bg-black" onClick={ handleSubmit }>
+                        <button type="submit" className="px-8 py-2 rounded-xl shadow-md shadow-red-300 text-white bg-black" onClick={ handleSubmit }>
                             Subscribe
                         </button>
                     </div>
+                </section>
+                <section className="w-full text-center font-semibold">
+                    <small>You will not receive spam. You will receive an email with information to new features of Esay Wallet.</small>
+                    <br/>
+                    <small>You can unsubscribe at anytime.</small>
                 </section>
             </div>
         </div>
